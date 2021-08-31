@@ -1,0 +1,58 @@
+{
+  "name": "react-to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "lint": "eslint src/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "cities.json": "1.1.5",
+    "google-map-react": "2.1.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "4.2.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.0",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^11.1.2",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  }
+}
