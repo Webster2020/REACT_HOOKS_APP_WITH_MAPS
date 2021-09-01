@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import styles from "./DistanceBar.scss";
+import PropTypes from 'prop-types';
+import styles from './DistanceBar.scss';
 
 const DistanceBar = ({ distance, currentDistance }) => {
   return (
@@ -31,7 +31,7 @@ const DistanceBar = ({ distance, currentDistance }) => {
 
 DistanceBar.propTypes = {
   distance: PropTypes.number,
-  currentDistance: PropTypes.number
+  currentDistance: PropTypes.number,
 };
 
 export default DistanceBar;

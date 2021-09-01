@@ -1,13 +1,13 @@
 import React from 'react';
-import { useState } from "react";
-import { dataStore } from "../../../data/dataStore";
-import styles from "./NavBar.scss";
-import Button from "../../common/Button/Button";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { AiFillCaretDown } from "react-icons/ai";
-import { FaCity, FaWeebly } from "react-icons/fa";
-import { GiSettingsKnobs } from "react-icons/gi";
+import { useState } from 'react';
+import { dataStore } from '../../../data/dataStore';
+import styles from './NavBar.scss';
+import Button from '../../common/Button/Button';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { AiFillCaretDown } from 'react-icons/ai';
+import { FaCity, FaWeebly } from 'react-icons/fa';
+import { GiSettingsKnobs } from 'react-icons/gi';
 
 const NavBar = ({ togglePanel, setPanelType }) => {
   const activeButton = `${styles.navListElem} ${styles.navListElemActive}`;
@@ -19,19 +19,19 @@ const NavBar = ({ togglePanel, setPanelType }) => {
   const navExpand = styles.navExpand;
   const navExpandRot = `${styles.navExpand} ${navExpandRot}`;
 
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState('home');
   const [showNav, setShowNav] = useState(false);
 
   const changePageToHome = () => {
-    setPage("home");
+    setPage('home');
   };
 
   const changePageToMap = () => {
-    setPage("map");
+    setPage('map');
   };
 
   const changePageToStopwatch = () => {
-    setPage("stopwatch");
+    setPage('stopwatch');
   };
 
   const displayHiddenList = () => {
@@ -85,10 +85,10 @@ const NavBar = ({ togglePanel, setPanelType }) => {
         </div>
         <div className={styles.navInnerWrapper}>
           <ul className={styles.navList}>
-            <li className={page !== "map" ? disactiveButton : activeButton}>
+            <li className={page !== 'map' ? disactiveButton : activeButton}>
               <Button
                 onClick={() => {
-                  setPanelType("cities");
+                  setPanelType('cities');
                   togglePanel();
                 }}
               >
@@ -98,10 +98,10 @@ const NavBar = ({ togglePanel, setPanelType }) => {
                 </h1>
               </Button>
             </li>
-            <li className={page !== "map" ? disactiveButton : activeButton}>
+            <li className={page !== 'map' ? disactiveButton : activeButton}>
               <Button
                 onClick={() => {
-                  setPanelType("panel");
+                  setPanelType('panel');
                   togglePanel();
                 }}
               >
@@ -120,7 +120,7 @@ const NavBar = ({ togglePanel, setPanelType }) => {
 
 NavBar.propTypes = {
   togglePanel: PropTypes.func,
-  setPanelType: PropTypes.func
+  setPanelType: PropTypes.func,
 };
 
 export default NavBar;

@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { dataStore } from "../../../data/dataStore";
-import styles from "./Slider.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { dataStore } from '../../../data/dataStore';
+import styles from './Slider.scss';
 
 class Slider extends React.Component {
   state = {
     currentSlide: 0,
-    slidesCount: this.props.slides.length
+    slidesCount: this.props.slides.length,
   };
 
   intervalMethod = () => {
@@ -14,7 +14,7 @@ class Slider extends React.Component {
       currentSlide:
         this.state.currentSlide < this.props.slides.length - 1
           ? this.state.currentSlide + 1
-          : 0
+          : 0,
     });
   };
 
@@ -107,11 +107,11 @@ class Slider extends React.Component {
 
 Slider.propTypes = {
   activeSlider: PropTypes.string,
-  slides: PropTypes.array
+  slides: PropTypes.array,
 };
 
 Slider.defaultProps = {
-  slides: []
+  slides: [],
 };
 
 export default Slider;

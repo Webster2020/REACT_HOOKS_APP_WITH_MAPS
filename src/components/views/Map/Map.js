@@ -1,18 +1,18 @@
 import React from 'react';
-import { useState } from "react";
-import styles from "./Map.scss";
-import { dataStore } from "../../../data/dataStore";
-import Panel from "../../features/Panel/Panel";
-import PropTypes from "prop-types";
-import GoogleMaps from "../../features/GoogleMaps/GoogleMaps";
-import Button from "../../common/Button/Button";
-import { findCityCoordsArr } from "../../../utils/findCityCoords";
-import { findPointsCoordsArr } from "../../../utils/findPointsCoords";
+import { useState } from 'react';
+import styles from './Map.scss';
+import { dataStore } from '../../../data/dataStore';
+import Panel from '../../features/Panel/Panel';
+import PropTypes from 'prop-types';
+import GoogleMaps from '../../features/GoogleMaps/GoogleMaps';
+import Button from '../../common/Button/Button';
+import { findCityCoordsArr } from '../../../utils/findCityCoords';
+import { findPointsCoordsArr } from '../../../utils/findPointsCoords';
 import {
   calcCenterPointLat,
-  calcCenterPointLng
-} from "../../../utils/calcCenterPoint";
-import { RiFullscreenLine, RiFullscreenExitLine } from "react-icons/ri";
+  calcCenterPointLng,
+} from '../../../utils/calcCenterPoint';
+import { RiFullscreenLine, RiFullscreenExitLine } from 'react-icons/ri';
 
 const Map = ({ togglePanel, panelType }) => {
   const activePanel = `${styles.mapContainer} ${styles.mapBcgColor} ${styles.activePanel}`;
@@ -27,23 +27,23 @@ const Map = ({ togglePanel, panelType }) => {
   const [cityArrA, setCityArrA] = useState([]);
   const [cityArrB, setCityArrB] = useState([]);
   const [selectedCityA, setSelectedCityA] = useState({
-    name: "",
-    country: "",
+    name: '',
+    country: '',
     lat: 0,
-    lng: 0
+    lng: 0,
   });
   const [selectedCityB, setSelectedCityB] = useState({
-    name: "",
-    country: "",
+    name: '',
+    country: '',
     lat: 0,
-    lng: 0
+    lng: 0,
   });
 
   const [distancePoints, setDistancePoints] = useState({
-    name: "",
-    country: "",
+    name: '',
+    country: '',
     lat: 0,
-    lng: 0
+    lng: 0,
   });
 
   const [pointsArr, setPointsArr] = useState([]);
@@ -54,7 +54,7 @@ const Map = ({ togglePanel, panelType }) => {
   const panelActions = [
     {
       id: 0,
-      title: "WIDTH",
+      title: 'WIDTH',
       increaseOption: () => {
         if (mapWidth < 0) {
           setmapWidth(mapWidth + 50);
@@ -64,11 +64,11 @@ const Map = ({ togglePanel, panelType }) => {
         if (mapWidth > -300) {
           setmapWidth(mapWidth - 50);
         }
-      }
+      },
     },
     {
       id: 1,
-      title: "BORDER RADIUS",
+      title: 'BORDER RADIUS',
       increaseOption: () => {
         if (mapBorderRadius < 200) {
           setmapBorderRadius(mapBorderRadius + 5);
@@ -78,11 +78,11 @@ const Map = ({ togglePanel, panelType }) => {
         if (mapBorderRadius > 0) {
           setmapBorderRadius(mapBorderRadius - 5);
         }
-      }
+      },
     },
     {
       id: 2,
-      title: "BORDER WIDTH",
+      title: 'BORDER WIDTH',
       increaseOption: () => {
         if (mapBorderWidth < 20) {
           setmapBorderWidth(mapBorderWidth + 1);
@@ -92,11 +92,11 @@ const Map = ({ togglePanel, panelType }) => {
         if (mapBorderWidth > 0) {
           setmapBorderWidth(mapBorderWidth - 1);
         }
-      }
+      },
     },
     {
       id: 3,
-      title: "FONT SIZE",
+      title: 'FONT SIZE',
       increaseOption: () => {
         if (mapFontSize < 50) {
           setmapFontSize(mapFontSize + 1);
@@ -106,8 +106,8 @@ const Map = ({ togglePanel, panelType }) => {
         if (mapFontSize > 0) {
           setmapFontSize(mapFontSize - 1);
         }
-      }
-    }
+      },
+    },
   ];
 
   const panelInputsActions = [
@@ -115,24 +115,24 @@ const Map = ({ togglePanel, panelType }) => {
       setCoordsCity: (cityNameA) => {
         setCityArrA(findCityCoordsArr(cityNameA));
         setSelectedCityA({
-          name: "",
-          country: "",
+          name: '',
+          country: '',
           lat: 0,
-          lng: 0
+          lng: 0,
         });
-      }
+      },
     },
     {
       setCoordsCity: (cityNameB) => {
         setCityArrB(findCityCoordsArr(cityNameB));
         setSelectedCityB({
-          name: "",
-          country: "",
+          name: '',
+          country: '',
           lat: 0,
-          lng: 0
+          lng: 0,
         });
-      }
-    }
+      },
+    },
   ];
 
   const setPointsCoords = (latA, latB, lngA, lngB) => {
@@ -151,10 +151,10 @@ const Map = ({ togglePanel, panelType }) => {
 
   const displayDistance = () => {
     const centerPoint = {
-      name: "Distance:",
-      country: "...km",
+      name: 'Distance:',
+      country: '...km',
       lat: calcCenterPointLat(selectedCityA, selectedCityB),
-      lng: calcCenterPointLng(selectedCityA, selectedCityB)
+      lng: calcCenterPointLng(selectedCityA, selectedCityB),
     };
     setDistancePoints(centerPoint);
     setPointsCoords(
@@ -165,7 +165,7 @@ const Map = ({ togglePanel, panelType }) => {
     );
     setShowDist([
       showDist[0] ? showDist[0] : !showDist[0],
-      showDist[1] ? showDist[1] : !showDist[1]
+      showDist[1] ? showDist[1] : !showDist[1],
     ]);
   };
 
@@ -194,7 +194,7 @@ const Map = ({ togglePanel, panelType }) => {
         panelType={panelType}
         actions={panelActions}
         inputs={panelInputsActions}
-        cityTitle={["CITY A", "CITY B"]}
+        cityTitle={['CITY A', 'CITY B']}
       />
       <section
         className={
@@ -209,7 +209,7 @@ const Map = ({ togglePanel, panelType }) => {
           borderRadius: `${mapBorderRadius}px`,
           borderWidth: `${mapBorderWidth}px`,
           padding: `${0}px`,
-          fontSize: `${mapFontSize}px`
+          fontSize: `${mapFontSize}px`,
         }}
       >
         <h1 className={styles.mapTitle}>{dataStore.map.title.titleText}</h1>
@@ -254,12 +254,12 @@ const Map = ({ togglePanel, panelType }) => {
 };
 
 Map.defaultProps = {
-  togglePanel: false
+  togglePanel: false,
 };
 
 Map.propTypes = {
   togglePanel: PropTypes.bool,
-  panelType: PropTypes.string
+  panelType: PropTypes.string,
 };
 
 export default Map;

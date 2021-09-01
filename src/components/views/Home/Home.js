@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from "./Home.scss";
-import { dataStore } from "../../../data/dataStore";
-import PropTypes from "prop-types";
-import SliderLinks from "../../features/SliderLinks/SliderLinks";
+import styles from './Home.scss';
+import { dataStore } from '../../../data/dataStore';
+import PropTypes from 'prop-types';
+import SliderLinks from '../../features/SliderLinks/SliderLinks';
 
 const Home = ({ setActiveSlider }) => {
   return (
@@ -13,14 +13,14 @@ const Home = ({ setActiveSlider }) => {
         <div className={styles.homeListWrapper}>
           <ul>
             <SliderLinks
-              id={"map"}
+              id={'map'}
               no={1}
-              setActiveSlider={() => setActiveSlider("map")}
+              setActiveSlider={() => setActiveSlider('map')}
             />
             <SliderLinks
-              id={"stopwatch"}
+              id={'stopwatch'}
               no={2}
-              setActiveSlider={() => setActiveSlider("stopwatch")}
+              setActiveSlider={() => setActiveSlider('stopwatch')}
             />
           </ul>
         </div>
@@ -30,7 +30,7 @@ const Home = ({ setActiveSlider }) => {
 };
 
 Home.propTypes = {
-  setActiveSlider: PropTypes.func
+  setActiveSlider: PropTypes.func,
 };
 
 export default Home;

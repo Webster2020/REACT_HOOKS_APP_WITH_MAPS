@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from "./PanelOption.scss";
-import PropTypes from "prop-types";
-import Button from "../../common/Button/Button";
+import styles from './PanelOption.scss';
+import PropTypes from 'prop-types';
+import Button from '../../common/Button/Button';
 
 const PanelOption = ({ title, increaseOption, decreaseOption }) => {
   return (
@@ -20,7 +20,7 @@ const PanelOption = ({ title, increaseOption, decreaseOption }) => {
 PanelOption.propTypes = {
   title: PropTypes.string,
   increaseOption: PropTypes.func,
-  decreaseOption: PropTypes.func
+  decreaseOption: PropTypes.func,
 };
 
 export default PanelOption;

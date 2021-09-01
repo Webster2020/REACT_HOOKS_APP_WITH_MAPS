@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.footer`
   display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.footer`
 export const Title = styled.h1`
   display: block;
   margin: 20px;
-  font-family: "Big Shoulders Display", cursive;
+  font-family: 'Big Shoulders Display', cursive;
   font-size: 25px;
   color: white;
   @media (max-width: 576px) {
@@ -31,7 +31,7 @@ export const Socials = styled.div`
   justify-content: space-between;
   margin: 20px;
   width: 90px;
-  font-family: "Big Shoulders Display", cursive;
+  font-family: 'Big Shoulders Display', cursive;
   font-size: 25px;
   color: white;
   @media (max-width: 576px) {

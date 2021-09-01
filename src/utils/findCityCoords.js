@@ -1,4 +1,4 @@
-import cities from "cities.json";
+import cities from 'cities.json';
 
 export const findCityCoordsArr = (cityName) => {
   const citiesArr = [];
@@ -18,7 +18,7 @@ export const findCityCoordsArr = (cityName) => {
     }
   }
   if (m === 0) {
-    alert("Wrong city name! Choose another city!");
+    alert('Wrong city name! Choose another city!');
     return citiesArr;
   } else {
     return citiesArr;

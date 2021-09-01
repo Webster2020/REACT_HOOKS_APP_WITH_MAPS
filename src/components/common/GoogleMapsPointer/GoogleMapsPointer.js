@@ -1,25 +1,25 @@
 import React from 'react';
-import styles from "./GoogleMapsPointer.scss";
-import { GrLocationPin } from "react-icons/gr";
-import PropTypes from "prop-types";
+import styles from './GoogleMapsPointer.scss';
+import { GrLocationPin } from 'react-icons/gr';
+import PropTypes from 'prop-types';
 
 const GoogleMapsPointer = ({ type, cityData, text, selectCity }) => {
   const clickHandler = () => {
-    console.log("CITY: ", text, "type: ", type);
+    console.log('CITY: ', text, 'type: ', type);
   };
 
   return (
     <button
       className={
-        type === "distance"
+        type === 'distance'
           ? styles.gMapsPointerDistance
-          : type === "points"
-          ? styles.gMapsPointerDistancePoints
-          : styles.gMapsPointer
+          : type === 'points'
+            ? styles.gMapsPointerDistancePoints
+            : styles.gMapsPointer
       }
-      onClick={type === "array" ? () => selectCity(cityData) : clickHandler}
+      onClick={type === 'array' ? () => selectCity(cityData) : clickHandler}
     >
-      {type !== "distance" && type !== "points" ? (
+      {type !== 'distance' && type !== 'points' ? (
         <GrLocationPin className={styles.gMapsPointerIcon} />
       ) : (
         <div></div>
@@ -34,7 +34,7 @@ GoogleMapsPointer.propTypes = {
   type: PropTypes.string,
   cityData: PropTypes.object,
   text: PropTypes.string,
-  selectCity: PropTypes.func
+  selectCity: PropTypes.func,
 };
 
 export default GoogleMapsPointer;

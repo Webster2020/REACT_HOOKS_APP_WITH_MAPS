@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import styles from "./Time.scss";
+import PropTypes from 'prop-types';
+import styles from './Time.scss';
 
 const Time = ({ currentTime }) => {
   return (
@@ -9,7 +9,7 @@ const Time = ({ currentTime }) => {
         {`${
           Math.floor(currentTime / (60000 * 60)) > 9
             ? Math.floor(currentTime / (60000 * 60))
-            : "0" + Math.floor(currentTime / (60000 * 60))
+            : '0' + Math.floor(currentTime / (60000 * 60))
         }`}
         <div className={styles.timeUnitsName}>h</div>
       </div>
@@ -18,7 +18,7 @@ const Time = ({ currentTime }) => {
         {`${
           Math.floor(currentTime / 60000) % 60 > 9
             ? Math.floor(currentTime / 60000) % 60
-            : "0" + (Math.floor(currentTime / 60000) % 60)
+            : '0' + (Math.floor(currentTime / 60000) % 60)
         }`}
         <div className={styles.timeUnitsName}>min</div>
       </div>
@@ -27,7 +27,7 @@ const Time = ({ currentTime }) => {
         {`${
           Math.floor(currentTime / 1000) % 60 > 9
             ? Math.floor(currentTime / 1000) % 60
-            : "0" + (Math.floor(currentTime / 1000) % 60)
+            : '0' + (Math.floor(currentTime / 1000) % 60)
         }`}
         <div className={styles.timeUnitsName}>sec</div>
       </div>
@@ -36,7 +36,7 @@ const Time = ({ currentTime }) => {
         {`${
           Math.floor(currentTime / 10) % 100 > 9
             ? Math.floor(currentTime / 10) % 100
-            : "0" + (Math.floor(currentTime / 10) % 100)
+            : '0' + (Math.floor(currentTime / 10) % 100)
         }`}
       </div>
     </div>
@@ -44,7 +44,7 @@ const Time = ({ currentTime }) => {
 };
 
 Time.propTypes = {
-  currentTime: PropTypes.number
+  currentTime: PropTypes.number,
 };
 
 export default Time;

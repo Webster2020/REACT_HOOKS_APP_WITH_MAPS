@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState, useRef, useEffect } from "react";
-import styles from "./Stopwatch.scss";
-import { dataStore } from "../../../data/dataStore";
-import Clock from "../../features/Clock/Clock";
-import Time from "../../features/Time/Time";
-import StopwatchForm from "../../features/StopwatchForm/StopwatchForm";
-import DistanceBar from "../../features/DistanceBar/DistanceBar";
+import { useState, useRef, useEffect } from 'react';
+import styles from './Stopwatch.scss';
+import { dataStore } from '../../../data/dataStore';
+import Clock from '../../features/Clock/Clock';
+import Time from '../../features/Time/Time';
+import StopwatchForm from '../../features/StopwatchForm/StopwatchForm';
+import DistanceBar from '../../features/DistanceBar/DistanceBar';
 
 const Stopwatch = () => {
   const [timeIsRunning, setTimeIsRunning] = useState(false);
@@ -14,7 +14,7 @@ const Stopwatch = () => {
   const [distance, setDistance] = useState(0);
   const [currentDistance, setCurrentDistance] = useState(0);
   const [velocity, setVelocity] = useState(0);
-  const [xFactor, setXFactor] = useState(1);
+  const [xFactor, setXFactor] = useState('1');
 
   const intervalRef = useRef(null);
 
@@ -61,7 +61,7 @@ const Stopwatch = () => {
     setCurrentDistance(0);
     setDistance(0);
     setVelocity(0);
-    setXFactor(1);
+    setXFactor('1');
     if (timeIsRunning) {
       setTimeIsRunning(false);
     }

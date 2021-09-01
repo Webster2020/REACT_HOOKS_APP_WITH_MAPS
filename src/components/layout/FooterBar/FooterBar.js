@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Title, Socials, ButtonContent } from "./FooterBar.styles";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import Button from "../../common/Button/Button";
+import { Container, Title, Socials, ButtonContent } from './FooterBar.styles';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import Button from '../../common/Button/Button';
 
 const FooterBar = () => {
   return (
@@ -9,9 +9,9 @@ const FooterBar = () => {
       <Title>WEBSTER</Title>
       <Socials>
         <a
-          href={"https://github.com/Webster2020"}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={'https://github.com/Webster2020'}
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <Button>
             <ButtonContent>
@@ -20,9 +20,9 @@ const FooterBar = () => {
           </Button>
         </a>
         <a
-          href={"https://linkedin.com/in/michal-szwajgier"}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={'https://linkedin.com/in/michal-szwajgier'}
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <Button>
             <ButtonContent>

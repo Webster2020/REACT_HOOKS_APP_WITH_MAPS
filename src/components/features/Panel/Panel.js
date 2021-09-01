@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState } from "react";
-import styles from "./Panel.scss";
-import PropTypes from "prop-types";
-import PanelOption from "../PanelOption/PanelOption";
-import PanelInputs from "../PanelInputs/PanelInputs";
-import Button from "../../common/Button/Button";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { useState } from 'react';
+import styles from './Panel.scss';
+import PropTypes from 'prop-types';
+import PanelOption from '../PanelOption/PanelOption';
+import PanelInputs from '../PanelInputs/PanelInputs';
+import Button from '../../common/Button/Button';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const Panel = ({ togglePanel, panelType, actions, inputs, cityTitle }) => {
   const panelActive = `${styles.panelContainer} ${styles.panelActive}`;
@@ -40,18 +40,18 @@ const Panel = ({ togglePanel, panelType, actions, inputs, cityTitle }) => {
 
   return (
     <section className={togglePanel ? panelActive : panelDisactive}>
-      <Button onClick={panelType === "panel" ? prevOption : prevInput}>
+      <Button onClick={panelType === 'panel' ? prevOption : prevInput}>
         <h2 className={styles.panelButtonText}>
           <IoIosArrowBack />
         </h2>
       </Button>
 
-      {panelType === "panel" && <PanelOption {...actions[option]} />}
-      {panelType === "cities" && (
+      {panelType === 'panel' && <PanelOption {...actions[option]} />}
+      {panelType === 'cities' && (
         <PanelInputs title={cityTitle[input]} {...inputs[input]} />
       )}
 
-      <Button onClick={panelType === "panel" ? nextOption : nextInput}>
+      <Button onClick={panelType === 'panel' ? nextOption : nextInput}>
         <h2 className={styles.panelButtonText}>
           <IoIosArrowForward />
         </h2>
@@ -61,7 +61,7 @@ const Panel = ({ togglePanel, panelType, actions, inputs, cityTitle }) => {
 };
 
 Panel.defaultProps = {
-  cityTitle: ["Nowhere"]
+  cityTitle: ['Nowhere'],
 };
 
 Panel.propTypes = {
@@ -69,7 +69,7 @@ Panel.propTypes = {
   panelType: PropTypes.string,
   actions: PropTypes.array,
   inputs: PropTypes.array,
-  cityTitle: PropTypes.array
+  cityTitle: PropTypes.array,
 };
 
 export default Panel;

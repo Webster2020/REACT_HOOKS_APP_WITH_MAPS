@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import styles from "./StopwatchForm.scss";
-import Button from "../../common/Button/Button";
+import PropTypes from 'prop-types';
+import styles from './StopwatchForm.scss';
+import Button from '../../common/Button/Button';
 
 const StopwatchForm = ({
   distance,
@@ -12,7 +12,7 @@ const StopwatchForm = ({
   handleVelocity,
   handleXFactor,
   handleRunTimer,
-  handleResetTimer
+  handleResetTimer,
 }) => {
   return (
     <div className={styles.stopwatchFormWrapper}>
@@ -37,7 +37,7 @@ const StopwatchForm = ({
       <div className={styles.stopwatchFormInputWrapper}>
         <Button onClick={() => handleRunTimer()}>
           <h3 className={styles.stopwatchFormInputButton}>
-            {timeIsRunning ? "STOP" : "RUN"}
+            {timeIsRunning ? 'STOP' : 'RUN'}
           </h3>
         </Button>
       </div>
@@ -53,13 +53,13 @@ const StopwatchForm = ({
 StopwatchForm.propTypes = {
   distance: PropTypes.number,
   velocity: PropTypes.number,
-  xFactor: PropTypes.number,
+  xFactor: PropTypes.string,
   timeIsRunning: PropTypes.bool,
   handleDistance: PropTypes.func,
   handleVelocity: PropTypes.func,
   handleXFactor: PropTypes.func,
   handleRunTimer: PropTypes.func,
-  handleResetTimer: PropTypes.func
+  handleResetTimer: PropTypes.func,
 };
 
 export default StopwatchForm;

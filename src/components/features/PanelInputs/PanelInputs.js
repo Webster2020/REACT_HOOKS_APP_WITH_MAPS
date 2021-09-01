@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from "./PanelInputs.scss";
-import PropTypes from "prop-types";
-import Button from "../../common/Button/Button";
-import { useState } from "react";
+import styles from './PanelInputs.scss';
+import PropTypes from 'prop-types';
+import Button from '../../common/Button/Button';
+import { useState } from 'react';
 
 const PanelInputs = ({ title, setCoordsCity }) => {
-  const [cityName, setCityName] = useState("");
-  const [inputValue, setInputValue] = useState("");
+  const [cityName, setCityName] = useState('');
+  const [inputValue, setInputValue] = useState('');
 
   const handleCityName = (e) => {
     setCityName(e.target.value);
@@ -15,7 +15,7 @@ const PanelInputs = ({ title, setCoordsCity }) => {
 
   const addCity = (cityName) => {
     setCoordsCity(cityName);
-    setInputValue("");
+    setInputValue('');
   };
 
   return (
@@ -35,7 +35,7 @@ const PanelInputs = ({ title, setCoordsCity }) => {
 
 PanelInputs.propTypes = {
   title: PropTypes.string,
-  setCoordsCity: PropTypes.func
+  setCoordsCity: PropTypes.func,
 };
 
 export default PanelInputs;
