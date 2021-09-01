@@ -2,9 +2,17 @@ $color-light: #fff;
 $color-dark: #2f3542;
 $color-success: #26de81;
 $color-warning: #e1644e;
+$color-cards: dodgerblue;
+$color-album: blanchedalmond;
+$color-black: black;
+$color-white: white;
+$color-main-one: rgb(223, 160, 25);
+$color-main-two: rgba(39, 126, 177, 0.959);
+//$color-main-two: rgb(39, 126, 177);
 
 $font-text: 'Poppins', sans-serif;
+$font-title: 'Big Shoulders Display', cursive;
 
 $radius: 5px;
 $base-size: 12px;
-$transition: all 0.5s;
+$transition-fast: all 0.3s;

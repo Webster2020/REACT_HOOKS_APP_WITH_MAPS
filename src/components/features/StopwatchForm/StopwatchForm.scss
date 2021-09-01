@@ -1,0 +1,83 @@
+@import '../../../styles/global.scss';
+
+.stopwatchFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 5;
+  margin: 0 20px;
+  .stopwatchFormInputWrapper {
+    margin: 5px auto 5px 0;
+    .stopwatchFormInputTitle {
+      width: 200px;
+      color: $color-white;
+      font-size: 20px;
+    }
+    input {
+      margin: 0;
+      padding: 0 10px;
+      width: 200px;
+      background-color: $color-white;
+      line-height: 1;
+      font-family: $font-text;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      color: $color-main-two;
+      outline-color: $color-white;
+      border: none;
+      &:focus {
+        background-color: $color-main-two;
+        color: $color-white;
+        border-radius: 0;
+      }
+    }
+    .stopwatchFormInputButton {
+      width: 160px;
+      color: $color-white;
+      font-size: 25px;
+    }
+  }
+}
+
+//MEDIA
+@media(max-width: 768px) {
+  .stopwatchFormWrapper {
+    order: 1;
+    margin: 0 auto;
+    .stopwatchFormInputWrapper {
+      margin: 5px 0;
+      .stopwatchFormInputTitle {
+        width: 250px;
+        font-size: 25px;
+      }
+      input {
+        width: 250px;
+        font-size: 25px;
+      }
+      .stopwatchFormInputButton {
+        width: 200px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .stopwatchFormWrapper {
+    .stopwatchFormInputWrapper {
+      .stopwatchFormInputTitle {
+        width: 200px;
+        font-size: 20px;
+      }
+      input {
+        width: 200px;
+        font-size: 20px;
+      }
+      .stopwatchFormInputButton {
+        width: 160px;
+        font-size: 25px;
+      }
+    }
+  }
+}

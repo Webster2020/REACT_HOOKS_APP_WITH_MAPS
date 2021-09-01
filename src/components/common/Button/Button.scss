@@ -1,0 +1,26 @@
+@import '../../../styles/global.scss';
+
+.btnWrapper {
+  margin: 0 5px;
+}
+
+.btn {
+  padding: 10px;
+  background-color: inherit;
+  font-size: 25px;
+  transition: $transition-fast;
+  border: 3px solid transparent;
+  &:hover {
+    border: 3px solid $color-white;
+    border-radius: 20px;
+    background-color: $color-main-one;
+    cursor: pointer;
+    transition: $transition-fast;
+  }
+}
+
+@media(max-width: 576px) {
+  .btn {
+    padding: 5px;
+  }
+}

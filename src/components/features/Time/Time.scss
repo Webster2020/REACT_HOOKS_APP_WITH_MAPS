@@ -1,0 +1,88 @@
+@import '../../../styles/global.scss';
+
+.time {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 25px 20px auto;
+  height: 50px;
+  width: 250px;
+  .timeUnits {
+    position: relative;
+    margin: 5px 2px;
+    padding: 8px 5px 3px;
+    line-height: 1;
+    &:nth-child(odd) {
+      width: 50px !important;
+      background-color: $color-main-one;
+      border: 2px solid $color-white;
+      font-size: 20px;
+    }
+    &:nth-child(even) {
+      width: 10px !important;
+      background-color: inherit;
+      border: none;
+      font-size: 15px;
+    }
+    .timeUnitsName {
+      position: absolute;
+      padding: 5px 5px 3px;
+      top: 35px;
+      left: -2px;
+      height: 30px;
+      width: 110%;
+      line-height: 1;
+      font-size: 13px;
+    }
+  }
+}
+
+//MEDIA
+@media(max-width: 768px) {
+  .time {
+    margin: 10px auto 20px;
+    width: 250px;  
+    .timeUnits {
+      .timeUnitsName {
+        width: 108%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .time {
+    margin: 0 auto 10px;
+    width: 250px;
+    .timeUnits {
+      .timeUnitsName {
+        width: 108%;
+        padding: 7px 0 3px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .time {
+    height: 40px;
+    width: 200px;
+    .timeUnits {
+      padding: 5px 5px 3px;
+      &:nth-child(odd) {
+        width: 40px;
+        font-size: 15px;
+      }
+      &:nth-child(even) {
+        width: 10px;
+        font-size: 12px;
+      }
+      .timeUnitsName {
+        width: 114%;
+        top: 25px;
+      }
+    }
+  }
+}

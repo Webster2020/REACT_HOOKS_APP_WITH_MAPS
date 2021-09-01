@@ -1,0 +1,30 @@
+@import '../../../styles/global.scss';
+
+.panelOptionContainer {
+  padding: 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+}
+
+.panelOptionButtonText {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  color: white;
+}
+
+.panelOptionTitle {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+}
+
+@media(max-width: 576px) {
+  .panelOptionContainer {
+    padding: 3px 15px;
+    flex-direction: column;
+  }
+}

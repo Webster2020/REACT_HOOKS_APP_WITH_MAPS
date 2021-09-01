@@ -1,0 +1,163 @@
+@import '../../../styles/global.scss';
+
+.mapFullScreen {
+  position: fixed !important;
+  height: calc(100% + 30px) !important;
+  width: calc(100% + 50px) !important;
+  top: 0;
+  left: 0;
+}
+
+.mapContainer {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  height: calc(100vh - 240px);
+  width: calc(100vw - 40px);
+  line-height: 1;
+  text-align: center;
+  border: 3px solid $color-white;
+  overflow-y: scroll;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 100%;
+    border-top: 3px solid $color-main-one;
+    background-color: $color-white;
+  }
+}
+
+.mapBefore {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  bottom: 27px;
+  right: 0;
+  border-left: 3px solid $color-main-one;
+  background-color: $color-white;
+  z-index: 101;
+}
+
+.mapTitle {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  right: 0;
+  z-index: 99;
+  margin: 10px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px $color-main-one;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: calc(50% - 160px);
+    width: 320px;
+    height: 3px;
+    background-color: $color-white;
+  }
+}
+
+.mapSubtitle {
+  position: absolute;
+  top: 35px;
+  left: -40px;
+  right: 0;
+  z-index: 99;
+  margin: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 8px;
+  text-shadow: 1px 1px $color-main-one;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mapContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.mapContainer {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.mapBcgColor {
+  background-color: $color-main-two;
+}
+
+.activePanel {
+  height: calc(100vh - 340px);
+}
+
+.mapShowDistance {
+  position: absolute;
+  bottom: 40px;
+  left: 5px;
+  z-index: 99;
+}
+
+.mapButtonText {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  color: $color-white;
+}
+
+.mapZoomInWrapper {
+  position: absolute;
+  bottom: 90px;
+  right: 55px;
+  z-index: 99;
+}
+
+.mapZoomOutWrapper {
+  position: absolute;
+  bottom: 40px;
+  right: 55px;
+  z-index: 99;
+}
+
+.mapZoomButton {
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  line-height: 1;
+  font-size: 20px;
+  color: $color-white;
+}
+
+.mapFullScreenWrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 5px;
+  z-index: 99;
+}
+
+@media(max-width: 576px) {
+  .mapContainer {
+    height: calc(100vh - 200px);
+  }
+  .activePanel {
+    height: calc(100vh - 350px);
+  }
+  .mapTitle {
+    top: 1vw;
+    font-size: 5vw;
+    &:after {
+      height: 0;
+    }
+  }
+  .mapSubtitle {
+    top: 7vw;
+    font-size: 3vw;
+    letter-spacing: 1vw;
+  }
+}
+

@@ -6,18 +6,13 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   background: $color-dark;
   font-family: $font-text;
-  font-size: ($base-size * 1.1);
+  font-size: ($base-size * 1.2);
   color: $color-light;
   letter-spacing: 0.5px;
-}
-
-:global(.container) {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
+  background-color: rgb(223, 160, 25);
 }
 
 @import "./typography.scss";

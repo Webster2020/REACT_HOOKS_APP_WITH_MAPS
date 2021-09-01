@@ -1,0 +1,27 @@
+@import '../../../styles/global.scss';
+
+.sliderLinksListElem {
+  margin: 10px 0;
+}
+.sliderLinksNavLink {
+  font-family: $font-title;
+  color: $color-white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sliderLinksNavLinkText {
+  padding: 15px 10px;
+  line-height: 0;
+}
+.sliderLinksNavLinkTextMobile {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .sliderLinksNavLinkText {
+    display: none;
+  }
+  .sliderLinksNavLinkTextMobile {
+    display: block;
+  }
+}

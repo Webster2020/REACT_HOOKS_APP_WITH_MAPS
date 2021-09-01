@@ -1,0 +1,49 @@
+@import '../../../styles/global.scss';
+
+.panelInputsContainer {
+  padding: 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid $color-white;
+}
+
+.panelInputsButtonText {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  color: $color-white;
+}
+
+.panelInputsTitle {
+  margin: 0 10px;
+  color: $color-white;
+  font-size: 20px;
+}
+
+.panelInputsInput {
+  margin: 0;
+  padding: 0 10px;
+  width: 150px;
+  background-color: $color-white;
+  line-height: 1;
+  font-family: $font-text;
+  font-size: 20px;
+  font-weight: 600;
+  color: $color-main-two;
+  outline-color: $color-white;
+  border: none;
+  &:focus {
+    background-color: $color-main-two;
+    color: $color-white;
+    border-radius: 0;
+  }
+}
+
+@media(max-width: 576px) {
+  .panelInputsContainer {
+    padding: 3px 15px;
+    flex-direction: column;
+  }
+}

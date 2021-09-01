@@ -1,0 +1,129 @@
+@import '../../../styles/global.scss';
+
+.gMapsPointer {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transform: translate(-15px, -15px);
+  transition: $transition-fast;
+  &:hover {
+    cursor: pointer;
+    z-index: 311;
+    transition: $transition-fast;
+    .gMapsPointerText {
+      display: block;
+      transform: scale(1.2);
+      transition: $transition-fast;
+    }
+    .gMapsPointerIcon {
+      transform: scale(2);
+      top: -15px;
+      color: $color-white;
+      transition: $transition-fast;
+    }
+    .gMapsPointerPoint {
+      border-radius: 50%;
+      border: 3px solid $color-main-one;
+      transform: scale(2);
+      transition: $transition-fast;
+    }
+  }
+  .gMapsPointerIcon {
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    font-size: 20px;
+    color: $color-white;
+    transition: $transition-fast;
+  }
+  .gMapsPointerPoint {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: $transition-fast;
+  }
+  .gMapsPointerText {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    top: -70px;
+    left: -35px;
+    font-size: 15px;
+    color: $color-white;
+    border: 3px solid $color-white;
+    border-radius: 20px;
+    background-color: $color-main-one;
+    cursor: pointer;
+    transition: $transition-fast;
+  }
+}
+
+.gMapsPointerDistance {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: transparent;
+  border: 3px solid transparent;
+  transition: $transition-fast;
+  &:hover {
+    cursor: pointer;
+    z-index: 310;
+    transition: $transition-fast;
+    .gMapsPointerText {
+      display: block;
+      color: $color-white;
+      transition: $transition-fast;
+    }
+    .gMapsPointerPoint {
+      border-radius: 50%;
+      border: 5px solid $color-main-one;
+      transform: translate(-1.5px, -1.5px);
+      transition: $transition-fast;
+    }
+  }
+  .gMapsPointerPoint {
+    position: absolute;
+    border: 3px solid $color-black;
+    top: 17px;
+    left: 17px;
+    transition: $transition-fast;
+  }
+  .gMapsPointerText {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    top: -60px;
+    left: -50px;
+    font-size: 15px;
+    border: 3px solid $color-white;
+    border-radius: 20px;
+    background-color: $color-main-one;
+    cursor: pointer;
+    transition: $transition-fast;
+  }
+}
+
+.gMapsPointerDistancePoints {
+  position: relative;
+  height: 2px;
+  width: 2px;
+  top: -33px;
+  left: -25px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: $transition-fast;
+  .gMapsPointerPoint {
+    position: absolute;
+    border: 2px solid $color-main-one;
+    top: 20px;
+    left: 20px;
+    transition: $transition-fast;
+  }
+}

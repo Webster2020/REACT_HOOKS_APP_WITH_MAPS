@@ -1,0 +1,185 @@
+@import '../../../styles/global.scss';
+
+.navContainer {
+  display: block;
+  margin-bottom: 20px;
+  padding: 12px 10px;
+  height: 80px;
+  line-height: 1;
+  border: 3px solid $color-white;
+  background-color: $color-main-two;
+}
+
+.navWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navInnerWrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  font-family: $font-title;
+  color: $color-white;
+  font-size: 25px;
+}
+
+.navLogoIcon {
+  display: none;
+  color: $color-white;
+  font-size: 20px;
+}
+
+.navExpand {
+  font-family: $font-title;
+  color: $color-white;
+  font-size: 25px;
+}
+
+.navExpandRot {
+  transform: rotate(180deg);
+}
+
+.navMap {
+  font-family: $font-title;
+  color: $color-white;
+  font-size: 25px;
+}
+
+.navHiddingListWrapper {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: -13px;
+  width: 200px;
+  border: 3px solid $color-white;
+  background-color: $color-main-two;
+  z-index: 300;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 23px;
+    right: -32px;
+    height: 67px;
+    width: 40px;
+    border-right: 3px solid $color-white;
+    background-color: $color-main-two;
+    z-index: 301;
+    transform: rotate(45deg);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -50px;
+    height: 50px;
+    width: 50px;
+    border: 3px solid $color-white;
+    border-left: none;
+    background-color: $color-main-two;
+    z-index: 300;
+  }
+}
+
+.navHiddingListWrapperActive {
+  display: block;
+}
+
+.navHiddingList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  .navHiddingListElem {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  .navElem {
+    font-size: 22px;
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.navList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  .navListElem {
+    display: none;
+  }
+  .navListElemActive {
+    display: block;
+  }
+}
+
+.navText {
+  color: $color-white;
+  font-size: 20px;
+}
+
+.navIcon {
+  display: none;
+  color: $color-white;
+  font-size: 20px;
+}
+
+@media(max-width: 576px) {
+  .navContainer {
+    padding: 0px 10px;
+    height: 60px;
+  }
+  .navWrapper {
+    margin: 5px 0;
+  }
+  .navHiddingListWrapper {
+    top: 65px;
+    width: 145px;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .navMap {
+    font-size: 18px;
+  }
+  .navLogo {
+    color: transparent;
+    font-size: 5px;
+  }
+  .navLogoIcon {
+    display: block;
+  }
+  .navList {
+    font-size: 0px;
+  }
+  .navText {
+    color: transparent;
+    font-size: 5px;
+  }
+  .navIcon {
+    display: block;
+  }
+  .navLink {
+    .navElem {
+      font-size: 15px;
+    }
+  }
+}
