@@ -1,144 +1,72 @@
+# REACT HOOKS APP WITH MAPS
+
+REACT HOOKS APP WITH MAPS is an application to finding city on map, calculate distance between two cities and check travel time of inputed distance and velocity. Instruction how use app are in home page as sliders. I created this application to train my skills in REACT HOOKS and to create something usefull. This project was prepared mainly with React.js library. Project is divided into components with scss styling files and JS files.
+
+## How it works
+![](REACT_HOOKS_APP_1.gif)
+![](REACT_HOOKS_APP_2.gif)
+
+## Link
+https://webster2020-react-hooks-app.herokuapp.com/
+
 ## How to start:
-
-1. git clone
+1. git clone git@github.com:Webster2020/REACT_HOOKS_APP_WITH_MAPS.git
 2. npm install
-3. npm start
+3. npm start - run the project and than You can see it on Your device
 
-## Next steps:
+*...or use link if You only want to check how it works
 
-- **PROP-TYPES**
-1. npm install --save prop-types (*package to define props in components*)
-2. import PropTypes from 'prop-types' (*import package in component, in witch it will be using*)
-3. use it like in example:
-```
-...
-static propTypes = {
-  title: PropTypes.node,
-  image: PropTypes.string.isRequired,
-}
-...
-```
+## Used technologies:
+ 1. React with Hooks - as main library
+ 2. SCSS - for styling
+ 3. Styled components - for styling FooterBar
+ 4. HTML5 - for content
+ 5. React Router - for routing
+ 6. React Icons
+ 7. Google Map React - to show data on maps
+ 8. Cities.json - to get data about biggest cities
+ 9. Eslint - to control bugs
+ 10. Husky - to control bugs before every commit
+ 11. Lint Staged - to check only changed files
+ 12. Webpack as bundler
+ 13. Babel as transpiler
 
-## Import data from another file
+## Implemented solutions:
+Application is divided into four views: home, sliders, map and stopwatch. Navbar on the top to switch between views.
+ 1. Home:
+ - sliders to select
+ 2. Sliders:
+ - instructions how chosen part of app works
+ - instructions as sliders (sliders create with timeout and interval)
+ 3. Map: 
+ - map is displayed thanks to google-map-react
+ - in navbar there are panels to select city (by input) and to change some properities of map view
+ - on map there are buttons to calculate distance, turn on full screen mode, zoom map in and out
+ 4. Stopwatch:
+ - clock with movable hands of the clock
+ - form with inputs to input distance and velocity, buttons to choose speed of time lapse, run/stop clock and reset all
+ - distance bar shows distance traveled in every second of time  
 
-```
-...
-import {exampleData, anotherData} from '../../data/dataStore.js';
-...
-```
-(**)
+## Project architecture
+Project is not divided into components in accordance with the React convention.
+ 1. components with JS, JSX and SCSS
+ 2. root file: index.html
+ 3. others functions in utils
+ 4. configuration files: gitignore, package.json, babel, webpack etc.
 
-## Navigating through directories
-- ./  *go to catalog where current file is*
-- ../ *one catalog up*
+## How did I create this project?
+Project was prepared based on my own idea and using my current knowledge and skills.
 
-## Next steps:
+## Plan for future development
+ - Validation of form inputs
+ - New functionalities
 
-- **HTML-PARSER**
-1. npm install --save react-html-parser (*package to parse HTML code*)
-2. import ReactHtmlParser from 'react-html-parser' (*import package in component, in witch it will be using*)
-3. use it like in example:
-```
-...
-<h2>{ReactHtmlParser('Things to do <sup>soon!</sup>')}</h2>
-...
-```
+## Authors
+* **Michal Szwajgier** - *Webster2020* - 
 
-## Next steps:
+## License
+Free licence
 
-- **ESLINT**
-1. npm install -D eslint
-2. create new file .eslint.json in main catalog (copy from _temp_eslint)
-3. add in package.json in srcipts line: "lint": "eslint src/"
-
-## Next steps:
-
-- **ESLINT-PLUGIN-REACT & BABEL-ESLINT**
-1. npm install -D eslint-plugin-react
-2. npm install -D babel-eslint
-3. to start this, type in console: npm run lint
-
-## Next steps:
-
-- **HUSKY** (*to run linter only with commit*)
-1. npm install -D husky@4.3.0
-2. add in package.json code:
-```
-...
-"husky": {
-  "hooks": {
-    "pre-commit": "npm run lint"
-  }
-},
-...
-```
-
-## Next steps:
-
-- **LINT-STAGED** (*check only changed files, which are changed before last commit*)
-1. npm install -D lint-staged
-2. add in package.json code:
-```
-...
-"husky": {
-  "hooks": {
-    "pre-commit": "npm run lint"
-  }
-},
-"lint-staged": {
-  "src/**/*.js": "eslint"
-},
-...
-```
-
-## Next steps:
-
-- **React Developer Tools** 
-- install developer tools for your browser
-
-## >>>>>>>>>>>>>>>>
-## -- ADD REDUX: --
-
-- **REDUX**
-1. npm install -S redux@4.0.1 react-redux@7.0.1
-2. npm install -D redux-devtools-extension@2.13.8
-3. install Redux DevTools 
-4. add:
-```
-import { Provider } from 'react-redux';
-import store from ./redux/store;
-```
-(*object store must exists in store.js file*)
-5. switch ReactDom.render on:
-```
-ReactDOM.render(<Provider store={store}><App /><Provider>, document.getElementById('app'));
-```
-6. npm install -S shortid
-
-
-## >>>>>>>>>>>>>>>>
-## -- ADD ROUTER: --
-
-- **REACT ROUTER**
-1. npm install -S react-router-dom@5.0.0
-2. add in webpack.config.js:
-- in obj. 'output', above 'scripts_bundle.js':
-```
-publicPath: '/',
-```
-(*this setting show main place to assets collect by application*)
-- under 'output' obj.:
-```
-devServer: {
-  historyApiFallback: true,
-},
-```
-
-- **REACT ROUTER TRANSITION**
-1. npm install -S react-router-transition@1.4.0
-2. to 'App' component add:
- ```
-import {AnimatedSwitch} from 'react-router-transition';
-},
-```
-3. change name of 'Switch' component to 'AnimatedSwitch' and add animation parameters
+# TODO
+- RWD for cuurent app version !! 22.08.2021
+- then try to update heroku link on github (git push heroku?)
