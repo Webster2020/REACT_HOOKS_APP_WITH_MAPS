@@ -31,8 +31,19 @@ const StopwatchForm = ({
       <div className={styles.stopwatchFormInputWrapper}>
         <h3 className={styles.stopwatchFormInputTitle}>X FASTER</h3>
       </div>
-      <div className={styles.stopwatchFormInputWrapper}>
-        <input value={xFactor} onChange={handleXFactor} />
+      <div className={`${styles.stopwatchFormInputWrapper} ${styles.stopwatchFormXFactorButtonsWrapper}`}>
+        <Button onClick={() => handleXFactor('1')}>
+          <h3 className={styles.stopwatchFormXFactorButton}>x1</h3>
+        </Button>
+        <Button onClick={() => handleXFactor('10')}>
+          <h3 className={styles.stopwatchFormXFactorButton}>x10</h3>
+        </Button>
+        <Button onClick={() => handleXFactor('100')}>
+          <h3 className={styles.stopwatchFormXFactorButton}>x100</h3>
+        </Button>
+        <Button onClick={() => handleXFactor('1000')}>
+          <h3 className={styles.stopwatchFormXFactorButton}>x1000</h3>
+        </Button>
       </div>
       <div className={styles.stopwatchFormInputWrapper}>
         <Button onClick={() => handleRunTimer()}>

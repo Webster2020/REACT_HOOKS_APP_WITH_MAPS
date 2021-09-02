@@ -34,7 +34,7 @@ class Slider extends React.Component {
   render() {
     const { activeSlider, slides } = this.props;
     const { slidesCount, currentSlide } = this.state;
-
+    console.log(slides);
     const dots = [];
     for (let i = 0; i < slidesCount; i++) {
       dots.push(

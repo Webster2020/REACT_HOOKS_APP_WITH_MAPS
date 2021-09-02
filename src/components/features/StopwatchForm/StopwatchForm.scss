@@ -9,14 +9,14 @@
   .stopwatchFormInputWrapper {
     margin: 5px auto 5px 0;
     .stopwatchFormInputTitle {
-      width: 200px;
+      width: 300px;
       color: $color-white;
       font-size: 20px;
     }
     input {
       margin: 0;
       padding: 0 10px;
-      width: 200px;
+      width: 300px;
       background-color: $color-white;
       line-height: 1;
       font-family: $font-text;
@@ -32,11 +32,21 @@
         border-radius: 0;
       }
     }
+    .stopwatchFormXFactorButton {
+      width: 40px;
+      color: $color-white;
+      font-size: 15px;
+    }
     .stopwatchFormInputButton {
-      width: 160px;
+      width: 260px;
       color: $color-white;
       font-size: 25px;
     }
+  }
+  .stopwatchFormXFactorButtonsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
@@ -48,6 +58,7 @@
     .stopwatchFormInputWrapper {
       margin: 5px 0;
       .stopwatchFormInputTitle {
+        margin: 0 auto;
         width: 250px;
         font-size: 25px;
       }
@@ -73,6 +84,11 @@
       input {
         width: 200px;
         font-size: 20px;
+      }
+      .stopwatchFormXFactorButton {
+        width: 35px;
+        color: $color-white;
+        font-size: 12px;
       }
       .stopwatchFormInputButton {
         width: 160px;

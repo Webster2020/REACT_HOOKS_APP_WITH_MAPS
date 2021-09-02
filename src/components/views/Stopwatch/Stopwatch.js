@@ -36,9 +36,13 @@ const Stopwatch = () => {
     setVelocity(e.target.value);
   };
 
-  const handleXFactor = (e) => {
-    setXFactor(e.target.value);
+  const handleXFactor = (value) => {
+    setXFactor(value);
   };
+
+  useEffect(() => {
+    console.log(xFactor);
+  });
 
   function handleRunTimer() {
     if (timeIsRunning) {
