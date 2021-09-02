@@ -94,7 +94,6 @@ const Stopwatch = () => {
             <StopwatchForm
               distance={distance}
               velocity={velocity}
-              xFactor={xFactor}
               timeIsRunning={timeIsRunning}
               handleDistance={handleDistance}
               handleVelocity={handleVelocity}

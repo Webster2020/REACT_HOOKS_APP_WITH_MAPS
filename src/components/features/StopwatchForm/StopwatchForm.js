@@ -6,7 +6,6 @@ import Button from '../../common/Button/Button';
 const StopwatchForm = ({
   distance,
   velocity,
-  xFactor,
   timeIsRunning,
   handleDistance,
   handleVelocity,

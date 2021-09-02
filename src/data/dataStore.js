@@ -49,18 +49,20 @@ export const dataStore = {
   },
   slides: {
     map: [
-      '../public/images/s1.JPG',
-      '../../public/images/s1.JPG',
-      '../../../public/images/s1.JPG',
-      './public/images/s1.JPG',
-      './public/images/s1.JPG',
-      'public/images/s1.JPG',
-      './public/s1.JPG',
-      's1.JPG',
-      '/Web/images/s1.JPG',
-      './../../../images/s1.JPG',
+      '../../public/images/map_s1.JPG',
+      '../../public/images/map_s2.JPG',
+      '../../public/images/map_s3.JPG',
+      '../../public/images/map_s4.JPG',
+      '../../public/images/map_s5.JPG',
+      '../../public/images/map_s6.JPG',
     ],
-    stopwatch: ['stopwatchSlide1', 'stopwatchSlide2', 'stopwatchSlide3'],
+    stopwatch: [
+      '../../public/images/time_s1.JPG',
+      '../../public/images/time_s2.JPG',
+      '../../public/images/time_s3.JPG',
+      '../../public/images/time_s4.JPG',
+      '../../public/images/time_s5.JPG',
+    ],
   },
   slider: {
     title: {
