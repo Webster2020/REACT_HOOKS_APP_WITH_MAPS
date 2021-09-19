@@ -68,5 +68,5 @@ Project was prepared based on my own idea and using my current knowledge and ski
 Free licence
 
 # TODO
-- RWD for cuurent app version !! 22.08.2021
-- then try to update heroku link on github (git push heroku?)
+- add new functionality
+- upgrade timer
